@@ -1,3 +1,4 @@
 # kanjaf.github.io
-This is my first project at Moringa School. One of the many to come!!The project defines who I am and sets out my goals and aspirations for the year. It is a simple site to use and needs no expertise to navigate. 
-The website is useful 
+I am a Data Scientist who works end-to-end: collecting data, cleaning it, analyzing it, modeling it, and communicating insights clearly. My goal is to make data both understandable and useful.
+
+I am currently expanding into data engineering — developing data pipelines and automations that ensure data flows smoothly from source to insight.
