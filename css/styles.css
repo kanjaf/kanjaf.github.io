@@ -1,26 +1,8 @@
-h1 {
-  color: blue;
-  text-align: center;
-}
-h2 {
-  font-style: italic;
-  text-align: right;
-  color: green;
-}
-
-p {
-  color: gray;
-}
-
 body {
-  background-color: orange;
-}
-img {
-  float: left;
-  width: 50%
-}
-  .sidebar {
-    width: 50%;
-    float: right;
-    background color: blue;
+  background-color: #ffffff;
+  color: #1f2937;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 40px;
 }
