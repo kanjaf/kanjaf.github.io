@@ -27,3 +27,7 @@ a:hover {
   color: #6b7280;
   font-size: 0.9em;
 }
+body {
+  background-color: #ffffff !important;
+}
+
