@@ -90,3 +90,36 @@ article {
   border-radius: 12px;
   border-left: 6px solid var(--teal);
 }
+.project-list {
+  list-style: none;
+  padding: 0;
+}
+
+.project-card {
+  display: block;
+  background: var(--teal-soft);
+  border-left: 6px solid var(--teal);
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin-bottom: 20px;
+  color: var(--text);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card strong {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.project-card p {
+  margin: 4px 0;
+  color: var(--text);
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
