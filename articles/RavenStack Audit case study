@@ -1,0 +1,47 @@
+RavenStack Audit: Decoding the 400-Day "Safety Zone"
+Overview
+I conducted an end-to-end product audit of RavenStack, analyzing behavior across 5,000+ accounts to identify why users churn and how to maximize Customer Lifetime Value (CLV).
+
+💳 The "Trial Advantage" vs. Day-1 Friction
+A deep dive into account types debunked the myth that trials attract low-quality users.
+
+The Vetting Effect: Converted trial users exhibit a higher median tenure (800 days) compared to direct-paid users (700 days). This indicates that the trial period effectively "vets" users, ensuring those who convert are a better long-term fit for the product.
+
+The "Infant Mortality" Spike: High-velocity churn (under 7 days) occurs across both trial and paid cohorts. This suggests the issue isn't "free-trial hunters," but a critical Value Realization failure in the first 48 hours.
+
+🌍 Geography: The "German Paradox"
+Retention dynamics vary wildly by region, revealing a polarized global market.
+
+High-Value Markets: Germany and Canada show the strongest and most consistent long-term retention.
+
+The Paradox: Germany exhibits the highest overall churn rate; however, among retained customers, tenure is the longest. This suggests a high-barrier product where successful activation leads to massive loyalty.
+
+Market-Specific Friction: France and Australia show weaker, more variable tenure, suggesting significant onboarding or market-fit friction.
+
+📉 The "Safety Zone" & Usage Intensity
+My analysis identified a definitive milestone for customer "stickiness."
+
+The 400-Day Milestone: Once a customer survives the 250-day "Value Gap" and hits the 400-day mark, churn probability drops to nearly zero.
+
+Usage Density: Most users (churned and active) peak at 45 feature events, but active users dominate the "Long Tail" of 125+ uses.
+
+🛠️ Diagnostic Audit: Stability & Beta Features
+I linked feature usage logs to identify if technical friction was driving departures.
+
+The Frustration Index: Active users in the primary usage peak experience an average of 1.0 error per session.
+
+The Beta Paradox: Experimental features showed a slightly higher churn rate (23.7%) than standard ones (22.1%), indicating that power users are highly sensitive to stability in new tools.
+
+💡 Strategic Roadmap
+"Time-to-First-Value" Audit: Since both paid and trial users bounce early, the onboarding flow requires guided automation to ensure a milestone hit within the first 48 hours.
+
+Bridging the Activation Gap: For the German market, prioritize activation over acquisition to unlock the high-tenure potential of that user base.
+
+Customer Success Milestone: Deploy re-engagement campaigns at the 200-day mark to push users through the "Value Gap" toward the 400-day Safety Zone.
+
+Technical Stack & Methodology
+Python (Pandas, Seaborn): Engineered a multi-table relational join using subscription_id and account_id as bridges.
+
+Statistical Analysis: Used Kernel Density Estimation (KDE) to isolate usage intensity peaks.
+
+GitHub: Cleaned and optimized repository for production-ready code review.
