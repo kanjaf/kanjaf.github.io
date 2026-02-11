@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RavenStack Audit: Decoding the 400-Day "Safety Zone"</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+  <nav>
+    <a href="/index.html">Home</a>
+    <a href="/articles/index.html">Blog</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+
+  <main class="main">
+    <article class="article">
+      <h1>RavenStack Audit: Decoding the 400-Day "Safety Zone"</h1>
+      <p class="meta">February 11, 2026 · By Kanja Mwingirwa</p>
+
+      <p>
+        This project is a full-funnel product audit of RavenStack, focused on identifying where users drop off,
+        what drives long-term retention, and how product teams can systematically increase Customer Lifetime Value (CLV).
+        All analysis code and visualizations are available in the 
+        <a href="https://github.com/yourusername/ravenstack-audit" target="_blank">GitHub repository</a>.
+      </p>
+
+      <h2>💳 Trial Strategy vs. Early Product Friction</h2>
+
+      <p>
+        I evaluated whether free trials attract low-intent users or serve as a qualification funnel.
+        The results show that trials are a product growth lever — not a liability.
+        (<a href="/projects/ravenstack/charts/trial-vs-paid.html">View retention chart</a>)
+      </p>
+
+      <ul>
+        <li><strong>Product Insight:</strong> Trial-converted users stay longer (median 800 days) than direct-paid users (700 days), proving that trials filter for product-market fit.</li>
+        <li><strong>Product Risk:</strong> Both cohorts experience high churn within the first 7 days, exposing a critical failure in early value delivery.</li>
+      </ul>
+
+      <blockquote>
+        If users don’t experience real value in the first 48 hours, pricing strategy becomes irrelevant.
+      </blockquote>
+
+      <h2>🌍 Market Fit by Geography</h2>
+
+      <p>
+        Retention varies significantly by region, signaling differences in onboarding effectiveness,
+        product expectations, and market readiness.
+        (<a href="/projects/ravenstack/charts/retention-by-country.html">View country retention dashboard</a>)
+      </p>
+
+      <ul>
+        <li><strong>High-ROI Markets:</strong> Germany and Canada show the strongest long-term retention.</li>
+        <li><strong>The German Paradox:</strong> Germany has higher early churn, but the users who activate become the most loyal — suggesting a high-complexity, high-payoff product experience.</li>
+        <li><strong>Underperforming Markets:</strong> France and Australia show inconsistent retention, indicating onboarding friction or weaker product-market alignment.</li>
+      </ul>
+
+      <h2>📉 The 400-Day Retention Threshold ("Safety Zone")</h2>
+
+      <p>
+        Survival analysis revealed a clear milestone where users become effectively “locked in.”
+        (<a href="/projects/ravenstack/charts/survival-curve.html">View survival curve</a>)
+      </p>
+
+      <ul>
+        <li><strong>Product Breakpoint:</strong> Users who reach day 400 have near-zero churn risk.</li>
+        <li><strong>Product Gap:</strong> The highest churn window occurs between days 0–250, defining the core activation challenge.</li>
+        <li><strong>Usage Signal:</strong> Active users populate the long tail of 125+ feature events, distinguishing power users from casual ones.</li>
+      </ul>
+
+      <h2>🛠️ Product Quality & Feature Stability</h2>
+
+      <p>
+        I linked feature usage to error logs to assess whether reliability issues were driving churn.
+        (<a href="/projects/ravenstack/charts/error-vs-retention.html">View error impact analysis</a>)
+      </p>
+
+      <ul>
+        <li><strong>Stability Threshold:</strong> Active users average 1.0 error per session — beyond this, retention drops sharply.</li>
+        <li><strong>Beta Risk:</strong> Experimental features show higher churn (23.7%) than stable features (22.1%), indicating power users are highly sensitive to instability.</li>
+      </ul>
+
+      <h2>🚀 Product Roadmap Recommendations</h2>
+
+      <ul>
+        <li><strong>Reduce Time-to-First-Value:</strong> Redesign onboarding with guided workflows that guarantee a meaningful outcome within 48 hours.</li>
+        <li><strong>Market-Specific Activation:</strong> Shift Germany’s growth strategy from acquisition to activation to unlock its high-retention potential.</li>
+        <li><strong>Retention Flywheel:</strong> Trigger lifecycle campaigns around day 200 to push users through the “Value Gap” and into the 400-day Safety Zone.</li>
+      </ul>
+
+      <h2>🔧 Technical Stack & Delivery</h2>
+
+      <ul>
+        <li><strong>Data Engineering:</strong> Multi-table relational joins using <code>subscription_id</code> and <code>account_id</code> (<a href="https://github.com/yourusername/ravenstack-audit/blob/main/data_pipeline.ipynb" target="_blank">view notebook</a>).</li>
+        <li><strong>Analytics:</strong> Kernel Density Estimation (KDE) for usage intensity modeling (<a href="https://github.com/yourusername/ravenstack-audit/blob/main/analysis.ipynb" target="_blank">view analysis</a>).</li>
+        <li><strong>Visualization:</strong> Interactive dashboards and static charts for stakeholder-ready reporting.</li>
+      </ul>
+
+      <a class="button" href="/articles/index.html">← Back to Blog</a>
+    </article>
+  </main>
+
+  <footer>
+    © 2026 Kanja · Built with love & data 💙
+  </footer>
+
+</body>
+</html>
