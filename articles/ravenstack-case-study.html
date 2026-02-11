@@ -1,47 +1,61 @@
-RavenStack Audit: Decoding the 400-Day "Safety Zone"
-Overview
-I conducted an end-to-end product audit of RavenStack, analyzing behavior across 5,000+ accounts to identify why users churn and how to maximize Customer Lifetime Value (CLV).
+<section class="project">
+  <h1>RavenStack Audit: Decoding the 400-Day “Safety Zone”</h1>
+  <p class="meta">February 11, 2026 · By Kanja Mwingirwa</p>
 
-💳 The "Trial Advantage" vs. Day-1 Friction
-A deep dive into account types debunked the myth that trials attract low-quality users.
+  <h2>Overview</h2>
+  <p>
+    I conducted an end-to-end product audit of RavenStack, analyzing behavior across <strong>5,000+ accounts</strong> to understand why users churn 
+    and how to maximize <strong>Customer Lifetime Value (CLV)</strong>.
+  </p>
 
-The Vetting Effect: Converted trial users exhibit a higher median tenure (800 days) compared to direct-paid users (700 days). This indicates that the trial period effectively "vets" users, ensuring those who convert are a better long-term fit for the product.
+  <h2>💳 Trial Advantage vs. Day-1 Friction</h2>
+  <ul>
+    <li>
+      <strong>The Vetting Effect:</strong> Converted trial users show a higher median tenure 
+      (<strong>800 days</strong>) than direct-paid users (<strong>700 days</strong>), proving trials filter for better long-term product fit.
+    </li>
+    <li>
+      <strong>The “Infant Mortality” Spike:</strong> High-velocity churn (under 7 days) occurs across both cohorts, signaling 
+      a <em>Value Realization failure in the first 48 hours</em> — not free-trial abuse.
+    </li>
+  </ul>
 
-The "Infant Mortality" Spike: High-velocity churn (under 7 days) occurs across both trial and paid cohorts. This suggests the issue isn't "free-trial hunters," but a critical Value Realization failure in the first 48 hours.
+  <h2>🌍 Geography: The “German Paradox”</h2>
+  <ul>
+    <li>
+      <strong>High-Value Markets:</strong> Germany and Canada show the strongest and most consistent long-term retention.
+    </li>
+    <li>
+      <strong>The Paradox:</strong> Germany has the highest early churn, yet the longest tenure among retained users — 
+      a high-barrier product where successful activation leads to deep loyalty.
+    </li>
+    <li>
+      <strong>Market-Specific Friction:</strong> France and Australia show weaker, more variable tenure, 
+      indicating onboarding or market-fit friction.
+    </li>
+  </ul>
 
-🌍 Geography: The "German Paradox"
-Retention dynamics vary wildly by region, revealing a polarized global market.
+  <h2>📉 The “Safety Zone” & Usage Intensity</h2>
+  <ul>
+    <li>
+      <strong>The 400-Day Milestone:</strong> Once users survive the 250-day “Value Gap” and reach <strong>400 days</strong>, churn probability drops to nearly zero.
+    </li>
+    <li>
+      <strong>Usage Density:</strong> Most users peak at <strong>45 feature events</strong>, but active users dominate the long tail of <strong>125+ uses</strong>, clearly separating power users from casual ones.
+    </li>
+  </ul>
 
-High-Value Markets: Germany and Canada show the strongest and most consistent long-term retention.
+  <h2>🛠️ Diagnostic Audit: Stability & Beta Features</h2>
+  <ul>
+    <li>
+      <strong>The Frustration Index:</strong> Active users experience an average of <strong>1.0 error per session</strong>.
+    </li>
+    <li>
+      <strong>The Beta Paradox:</strong> Experimental features show slightly higher churn (<strong>23.7%</strong>) than stable ones (<strong>22.1%</strong>), indicating power users are highly sensitive to instability.
+    </li>
+  </ul>
 
-The Paradox: Germany exhibits the highest overall churn rate; however, among retained customers, tenure is the longest. This suggests a high-barrier product where successful activation leads to massive loyalty.
-
-Market-Specific Friction: France and Australia show weaker, more variable tenure, suggesting significant onboarding or market-fit friction.
-
-📉 The "Safety Zone" & Usage Intensity
-My analysis identified a definitive milestone for customer "stickiness."
-
-The 400-Day Milestone: Once a customer survives the 250-day "Value Gap" and hits the 400-day mark, churn probability drops to nearly zero.
-
-Usage Density: Most users (churned and active) peak at 45 feature events, but active users dominate the "Long Tail" of 125+ uses.
-
-🛠️ Diagnostic Audit: Stability & Beta Features
-I linked feature usage logs to identify if technical friction was driving departures.
-
-The Frustration Index: Active users in the primary usage peak experience an average of 1.0 error per session.
-
-The Beta Paradox: Experimental features showed a slightly higher churn rate (23.7%) than standard ones (22.1%), indicating that power users are highly sensitive to stability in new tools.
-
-💡 Strategic Roadmap
-"Time-to-First-Value" Audit: Since both paid and trial users bounce early, the onboarding flow requires guided automation to ensure a milestone hit within the first 48 hours.
-
-Bridging the Activation Gap: For the German market, prioritize activation over acquisition to unlock the high-tenure potential of that user base.
-
-Customer Success Milestone: Deploy re-engagement campaigns at the 200-day mark to push users through the "Value Gap" toward the 400-day Safety Zone.
-
-Technical Stack & Methodology
-Python (Pandas, Seaborn): Engineered a multi-table relational join using subscription_id and account_id as bridges.
-
-Statistical Analysis: Used Kernel Density Estimation (KDE) to isolate usage intensity peaks.
-
-GitHub: Cleaned and optimized repository for production-ready code review.
+  <h2>💡 Strategic Roadmap</h2>
+  <ul>
+    <li>
+      <strong>Time-to-First-Value Audit:</strong> Redesign onboarding with guided automation to guarantee a meani
