@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Farnadis Kanja — Data Analyst and BI Specialist solving revenue leakage, churn, and inventory problems." />
-  <title>Farnadis Kanja | Building Data That Works</title>
+  <meta name="description" content="Marketing Performance & Budget Optimization Dashboard — Farnadis Kanja" />
+  <title>Marketing Analytics | Farnadis Kanja</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -21,85 +21,168 @@
       line-height: 1.7;
     }
     h1 {
-      font-size: 42px;
+      font-size: 36px;
       margin-bottom: 5px;
       font-weight: 700;
       border-left: 6px solid var(--teal);
       padding-left: 14px;
+      line-height: 1.2;
     }
     .tagline {
       color: var(--teal);
-      font-size: 20px;
-      margin-bottom: 40px;
+      font-size: 16px;
+      margin-bottom: 10px;
       font-weight: 500;
+      padding-left: 20px;
+    }
+    .status-badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--teal);
+      background: var(--teal-soft);
+      border: 1px solid var(--teal);
+      border-radius: 20px;
+      padding: 2px 12px;
+      margin-left: 20px;
+      margin-bottom: 30px;
     }
     h2 {
-      font-size: 22px;
-      margin-top: 50px;
+      font-size: 20px;
+      margin-top: 44px;
       color: var(--teal);
       border-bottom: 2px solid var(--teal-soft);
       padding-bottom: 6px;
+    }
+    h3 {
+      font-size: 16px;
+      color: var(--teal);
+      margin-top: 20px;
+      margin-bottom: 6px;
     }
     a {
       color: var(--teal);
       text-decoration: none;
       font-weight: 500;
     }
-    a:hover {
-      text-decoration: underline;
-    }
+    a:hover { text-decoration: underline; }
     .nav {
       margin-bottom: 40px;
       font-size: 16px;
     }
-    .project-list {
+
+    /* KPI cards */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 14px;
+      margin: 20px 0;
+    }
+    .kpi-card {
+      background: var(--teal-soft);
+      border-left: 4px solid var(--teal);
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+    .kpi-card .kpi-value {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--teal);
+      line-height: 1.1;
+    }
+    .kpi-card .kpi-label {
+      font-size: 12px;
+      color: #555;
+      margin-top: 4px;
+    }
+    .kpi-card .kpi-note {
+      font-size: 11px;
+      color: #888;
+      margin-top: 2px;
+    }
+
+    /* Dashboard screenshot */
+    .dashboard-img {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid #d0e4e4;
+      margin: 20px 0;
+      box-shadow: 0 4px 16px rgba(11,107,107,0.1);
+    }
+
+    /* Tech stack pills */
+    .pill-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 14px 0;
+    }
+    .pill {
+      background: var(--teal-soft);
+      border: 1px solid var(--teal);
+      color: var(--teal);
+      font-size: 13px;
+      font-weight: 500;
+      border-radius: 20px;
+      padding: 3px 14px;
+    }
+
+    /* Insights list */
+    .insight-list {
       list-style: none;
       padding: 0;
       margin: 0;
     }
-    .project-list li {
+    .insight-list li {
       background: var(--teal-soft);
-      padding: 14px 18px;
-      margin-bottom: 12px;
-      border-radius: 8px;
       border-left: 4px solid var(--teal);
-      transition: box-shadow 0.2s, transform 0.15s;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-bottom: 10px;
+      font-size: 14px;
     }
-    .project-list li:hover {
-      box-shadow: 0 3px 14px rgba(11,107,107,0.13);
-      transform: translateY(-2px);
-    }
-    .project-list li a {
-      display: block;
-      color: #1c1c1c;
-      font-weight: 400;
-    }
-    .project-list li a strong {
+    .insight-list li strong {
       color: var(--teal);
-      font-size: 15px;
       display: block;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
-    .proj-meta {
+
+    /* Links row */
+    .links-row {
       display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+    .link-btn {
+      display: inline-flex;
       align-items: center;
-      justify-content: space-between;
-      margin-bottom: 6px;
-    }
-    .proj-tag {
-      font-size: 12px;
+      gap: 8px;
+      background: var(--teal);
+      color: #fff !important;
+      font-size: 14px;
       font-weight: 600;
-      color: var(--teal);
-      background: #fff;
-      border: 1px solid var(--teal);
-      border-radius: 20px;
-      padding: 1px 10px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none !important;
+      transition: background 0.2s, transform 0.15s;
     }
-    .proj-tools {
-      font-size: 12px;
-      color: #666;
-      margin-top: 8px;
+    .link-btn:hover {
+      background: #094f4f;
+      transform: translateY(-1px);
+      text-decoration: none !important;
     }
+    .link-btn.outline {
+      background: transparent;
+      color: var(--teal) !important;
+      border: 2px solid var(--teal);
+    }
+    .link-btn.outline:hover {
+      background: var(--teal-soft);
+    }
+
+    p { margin-bottom: 12px; font-size: 15px; }
+
     footer {
       margin-top: 60px;
       font-size: 14px;
@@ -113,60 +196,145 @@
 <body>
 
   <nav class="nav">
-    <a href="index.html">Home</a> ·
-    <a href="articles/index.html">Blog</a> ·
-    <a href="about.html">About</a> ·
-    <a href="contact.html">Contact</a>
+    <a href="../index.html">Home</a> ·
+    <a href="../articles/index.html">Blog</a> ·
+    <a href="../about.html">About</a> ·
+    <a href="../contact.html">Contact</a>
   </nav>
 
-  <h1>Farnadis Kanja</h1>
-  <p class="tagline">Building Data That Works</p>
+  <h1>Marketing Performance &amp; Budget Optimization Dashboard</h1>
+  <p class="tagline">Multi-channel marketing analysis · United States</p>
+  <span class="status-badge">Completed</span>
 
-  <h2>About</h2>
+  <!-- Links -->
+  <div class="links-row">
+    <a class="link-btn" href="https://github.com/kanjaf/Marketing_Campaign_Analysis" target="_blank" rel="noopener noreferrer">
+      <!-- GitHub icon -->
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+      </svg>
+      GitHub Repo
+    </a>
+    <a class="link-btn outline" href="https://colab.research.google.com/drive/1gY-0YJ2Y0Zr2KJ2oaWGZYse2uiahQ6HK#scrollTo=WPK18uAO9vUw" target="_blank" rel="noopener noreferrer">
+      <!-- Colab icon -->
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="#0b6b6b" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.9 4.8C13.7 1.6 8.8 1.3 5.2 4L6.6 5.4c2.8-2 6.7-1.7 9.2.8 2.7 2.7 2.7 7.2 0 9.9-2.5 2.5-6.4 2.8-9.2.8L5.2 18.3c3.6 2.7 8.5 2.4 11.7-.8 3.5-3.6 3.5-9.2 0-12.7z"/>
+        <path d="M7.1 19.2c3.2 3.2 8.1 3.5 11.7.8L17.4 18.6c-2.8 2-6.7 1.7-9.2-.8-2.7-2.7-2.7-7.2 0-9.9 2.5-2.5 6.4-2.8 9.2-.8l1.4-1.4C15.2.9 10.3 1.2 7.1 4.4c-3.5 3.5-3.5 9.3 0 12.8z"/>
+      </svg>
+      Python Notebook
+    </a>
+  </div>
+
+  <!-- KPIs -->
+  <h2>Key Metrics</h2>
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-value">6.01</div>
+      <div class="kpi-label">Average ROAS</div>
+      <div class="kpi-note">Consistent throughout</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-value">$32.10</div>
+      <div class="kpi-label">Average CPC</div>
+      <div class="kpi-note">Google Ads highest</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-value">$633.78</div>
+      <div class="kpi-label">Average CPA</div>
+      <div class="kpi-note">Instagram most expensive</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-value">8.03%</div>
+      <div class="kpi-label">Avg Conversion Rate</div>
+      <div class="kpi-note">Stable across segments</div>
+    </div>
+  </div>
+
+  <!-- Dashboard screenshot -->
+  <h2>Dashboard</h2>
+  <img src="../tiger.jpg" alt="Marketing Performance Dashboard" class="dashboard-img" onerror="this.style.display='none'">
+  <p style="font-size:13px; color:#888;">Power BI dashboard showing revenue trends, segment performance, and geographic heatmaps.</p>
+
+  <!-- Problem -->
+  <h2>The Problem</h2>
   <p>
-    I am a professional Data Analyst and BI specialist with a background in Economics and Statistics. I specialize in solving "expensive problems" such as revenue leakage, churn analysis, and inventory optimization for e-commerce and FMCG companies.
+    A marketing team was running campaigns across multiple paid channels, but leadership had no visibility into which campaigns were truly profitable and which were wasting budget. Decisions were based on traffic volume rather than financial efficiency.
   </p>
   <p>
-    I am currently focusing on marketing analytics and data engineering — developing data pipelines and automations using tools like Apache NiFi.
+    As the marketing analyst, the task was to evaluate campaign performance by calculating key KPIs — CTR, conversion rate, CPA, ROAS, and ROI — then identify which channels generate efficient returns, which underperform, and how budget should be redistributed.
   </p>
 
-  <h2>Projects</h2>
-  <ul class="project-list">
+  <!-- Tech stack -->
+  <h2>Tech Stack</h2>
+  <div class="pill-group">
+    <span class="pill">Python (Pandas)</span>
+    <span class="pill">NumPy</span>
+    <span class="pill">Seaborn</span>
+    <span class="pill">Power BI Desktop</span>
+    <span class="pill">12,000+ records</span>
+    <span class="pill">ROAS / CPA / CVR</span>
+    <span class="pill">Attribution Modeling</span>
+  </div>
 
+  <!-- Features -->
+  <h2>Key Features</h2>
+  <ul class="insight-list">
     <li>
-      <a href="projects/index.html">
-        <div class="proj-meta">
-          <strong>Hospital Management Dashboard</strong>
-          <span class="proj-tag">In Progress</span>
-        </div>
-        Currently building an end-to-end dashboard for a medical clinic to track drug dispensing, prevent stockouts, and monitor clinical encounters and revenue.
-        <div class="proj-tools">Excel · VBA</div>
-      </a>
+      <strong>Executive Summary Layer</strong>
+      High-level KPI cards with automated trend insights (e.g., "Google Ads Highest CPC").
     </li>
-
     <li>
-      <a href="projects/marketing-analytics.html">
-        <div class="proj-meta">
-          <strong>Multi-Channel Marketing Analytics</strong>
-          <span class="proj-tag">Completed</span>
-        </div>
-        Comprehensive analysis of multi-channel marketing performance across the United States. Integrated Python for data orchestration and Power BI for advanced visualization — transforming raw campaign data into a decision-making tool that identifies high-value customer segments and optimizes advertising spend.
-        <div class="proj-tools">Python · Power BI</div>
-      </a>
+      <strong>Normalized Performance Tracking</strong>
+      A custom Average Daily Revenue trend line that corrects for calendar artifacts like the February dip.
     </li>
-
+    <li>
+      <strong>Hierarchical Deep-Dives</strong>
+      Matrix views allowing stakeholders to drill down from broad demographics (Age) to specific personas (Tech Enthusiasts).
+    </li>
+    <li>
+      <strong>Geographic Heatmaps</strong>
+      Performance-coded mapping to identify profitable markets vs. high-cost regions.
+    </li>
   </ul>
 
-  <h2>Skills</h2>
-  <p>
-    SQL (Advanced) | Power BI | Tableau | Excel &amp; Google Sheets | Python &amp; R | Apache NiFi | Acumatica ERP | Jira | Streamlit | GitHub | Research, Data &amp; MEL | Technical Writing
-  </p>
+  <!-- Insights -->
+  <h2>Top Insights &amp; Recommendations</h2>
+  <ul class="insight-list">
+    <li>
+      <strong>Scale the Power Persona</strong>
+      Women aged 35–44 (Tech Enthusiasts) represent the highest efficiency with an 8.12% CVR and 6.04x ROAS.
+    </li>
+    <li>
+      <strong>Budget Reallocation</strong>
+      Houston identified as a high-potential market where CPA is $10 lower than the New York average.
+    </li>
+    <li>
+      <strong>Efficiency Caps</strong>
+      Recommended a $645 CPA ceiling for the Men 25–34 Health segment to protect net margins.
+    </li>
+    <li>
+      <strong>Targeting Audit</strong>
+      Data proved "All Ages" broad targeting significantly underperforms compared to niche demographic segments.
+    </li>
+    <li>
+      <strong>Double Down on Facebook</strong>
+      Facebook shows strong CVR relative to cost — increasing allocation here improves overall portfolio efficiency.
+    </li>
+  </ul>
 
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:kanjafarnadis.data@gmail.com">kanjafarnadis.data@gmail.com</a></p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/kanja-farnadis" target="_blank" rel="noopener noreferrer">linkedin.com/in/kanja-farnadis</a></p>
-  <p>GitHub (Current): <a href="https://github.com/kanjaf" target="_blank" rel="noopener noreferrer">github.com/kanjaf</a></p>
-  <p>GitHub (Older Work): <a href="https://github.com/kanjamwingirwa" target="_blank" rel="noopener noreferrer">github.com/kanjamwingirwa</a></p>
+  <!-- Python -->
+  <h2>Data Transformation (Python)</h2>
+  <p>To ensure data integrity, a Python pipeline was used to:</p>
+  <ul class="insight-list">
+    <li>Handle missing values (NaN and NaT) to prevent visual artifacts in Power BI.</li>
+    <li>Validate data types for all financial metrics.</li>
+    <li>Generate high-density Seaborn heatmaps to cross-validate conversion clusters.</li>
+  </ul>
+
+  <div class="links-row" style="margin-top: 30px;">
+    <a class="link-btn" href="https://github.com/kanjaf/Marketing_Campaign_Analysis" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+    <a class="link-btn outline" href="https://colab.research.google.com/drive/1gY-0YJ2Y0Zr2KJ2oaWGZYse2uiahQ6HK#scrollTo=WPK18uAO9vUw" target="_blank" rel="noopener noreferrer">Open Python Notebook</a>
+  </div>
 
   <footer>
     © 2026 Farnadis Kanja — Building Data That Works
