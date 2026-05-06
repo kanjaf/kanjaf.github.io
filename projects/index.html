@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | Kanja</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Farnadis Kanja | Data Scientist</title>
 
   <style>
     body {
@@ -12,60 +12,131 @@
       margin: 50px auto;
       padding: 0 20px;
       line-height: 1.6;
+      color: #222;
+    }
+
+    nav {
+      margin-bottom: 30px;
     }
 
     nav a {
       margin-right: 15px;
       text-decoration: none;
       color: #0b6b6b;
+      font-weight: bold;
     }
 
-    .project {
-      border: 1px solid #ddd;
-      padding: 15px;
-      margin: 20px 0;
-      border-radius: 8px;
-    }
-
-    .project h2 a {
-      text-decoration: none;
+    h1, h2 {
       color: #0b6b6b;
     }
 
-    .project h2 a:hover {
-      text-decoration: underline;
+    .section {
+      margin-top: 40px;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #0b6b6b;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .skills {
+      line-height: 1.8;
+    }
+
+    .footer {
+      margin-top: 50px;
+      font-size: 14px;
+      color: #666;
     }
   </style>
 </head>
 
 <body>
 
+  <!-- NAV -->
   <nav>
     <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <h1>My Projects</h1>
+  <!-- HERO -->
+  <h1>Building Data That Works</h1>
 
-  <!-- Project 1 -->
-  <div class="project">
-    <h2>
-      <a href="inventory-aging.html">
-        Inventory Aging & Run Rate Model
-      </a>
-    </h2>
-    <p>Power BI + Excel analysis identifying stock risks and optimizing inventory levels.</p>
+  <!-- ABOUT -->
+  <div class="section" id="about">
+    <h2>About</h2>
+
+    <p>
+      I am a Data Scientist who works end-to-end: collecting data, cleaning it, analyzing it, modeling it, and communicating insights clearly. My goal is to make data both understandable and useful.
+    </p>
+
+    <p>
+      I am currently expanding into data engineering — developing data pipelines and automations that ensure data flows smoothly from source to insight.
+    </p>
   </div>
 
-  <!-- Project 2 -->
-  <div class="project">
-    <h2>
-      <a href="marketing-campaign-analysis.html">
-        Marketing Campaign Analysis
+  <!-- PROJECTS -->
+  <div class="section" id="projects">
+    <h2>Projects</h2>
+
+    <div class="card">
+      <a href="inventory-aging.html">
+        Inventory Aging & Run Rate Model (Power BI + Excel)
       </a>
-    </h2>
-    <p>Analysis of paid campaigns using CTR, CPA, ROAS, and conversion performance.</p>
+      <p>
+        Calculated stock turnover, aging buckets, and forecasted inventory depletion timelines.
+        Helped commercial teams identify SKUs at risk of stockout and reduce inventory waste.
+      </p>
+    </div>
+
+    <div class="card">
+      <a href="marketing-campaign-analysis.html">
+        Marketing Campaign Analysis (Excel + SQL + Power BI)
+      </a>
+      <p>
+        Evaluated multi-channel campaign performance using CTR, CPA, and ROAS to identify profitable vs wasteful campaigns.
+      </p>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section" id="skills">
+    <h2>Skills</h2>
+    <p class="skills">
+      Power BI | Tableau | Excel & Google Sheets | SQL | Python & R | Jira | Apache NiFi | Acumatica ERP | Research, Data & MEL | GitHub | Streamlit | Technical Writing
+    </p>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="section" id="contact">
+    <h2>Contact</h2>
+
+    <p>Email: kanjafarnadis.data@gmail.com</p>
+    <p>LinkedIn: linkedin.com/in/kanja-farnadis</p>
+    <p>GitHub (Current): github.com/kanjaf</p>
+    <p>GitHub (Older Work): github.com/kanjamwingirwa</p>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    © 2025 Farnadis Kanja — Building Data That Works
   </div>
 
 </body>
